@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  user:
+  password:
+  pool: 20
+  timeout: 5000
+
+development:
+  <<: *default
+  database: development_steam_chat
+
+test:
+  <<: *default
+  database: test_ticket_steam_chat
+
+production:
+  <<: *default
+  database: production_steam_chat
